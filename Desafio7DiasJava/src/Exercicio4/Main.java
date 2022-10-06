@@ -13,20 +13,20 @@ public class Main {
 		Integer N = Integer.valueOf(Leitura.nextLine());
 
 		int[] Vetor = new int[N];
-		int soma = 0;
-		float media;
+		int Soma = 0;
+		float Media;
 		
 		System.out.println("Informe os valores: ");
 
 		for (int i = 0; i < Vetor.length; i++) {
 			
 			Vetor[i] = Integer.valueOf(Leitura.nextLine());
-			soma = soma+Vetor[i];
+			Soma = Soma+Vetor[i];
 		}
 		
-		media = soma / Vetor.length;
+		Media = Soma / Vetor.length;
 		
-		System.out.println("A media dos valores e: "+media);
+		System.out.println("A media dos valores e: "+Media);
 		
 	}
 
