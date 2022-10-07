@@ -4,56 +4,58 @@ import java.util.Scanner;
 
 public class Main {
 
+	private static final Scanner Leitura = null;
+
 	public static void main(String[] args) {
 
-		Scanner Leitura = new Scanner(System.in);
+		Scanner leitura = new Scanner(System.in);
 
 		System.out.println("Informe a quantidade de numeros a serem verificados: ");
 
 		Integer N = Integer.valueOf(Leitura.nextLine());
 
-		int[] Array = new int[N];
-		int Maior = 0;
-		int Menor = 0;
+		int[] array = new int[N];
+		int maior = 0;
+		int menor = 0;
 
 		System.out.println("Informe os valores: ");
 
-		for (int i = 0; i < Array.length; i++) {
-			Array[i] = Integer.valueOf(Leitura.nextLine());
+		for (int i = 0; i < array.length; i++) {
+			array[i] = Integer.valueOf(Leitura.nextLine());
 		}
 
-		Maior = Main.verificaMaior(Array);
+		maior = Main.verificaMaior(array);
 
-		Menor = Main.verificaMenor(Array);
+		menor = Main.verificaMenor(array);
 
-		System.out.println("O maior numero e: " + Maior);
-		System.out.println("O menor numero e: " + Menor);
+		System.out.println("O maior numero e: " + maior);
+		System.out.println("O menor numero e: " + menor);
 
 	}
 
 	public static int verificaMaior(int Array[]) {
 
-		int Valor = 0;
+		int valor = 0;
 
 		for (int i = 1; i < Array.length; i++) {
-			if (Array[i] > Valor) {
-				Valor = Array[i];
+			if (Array[i] > valor) {
+				valor = Array[i];
 			}
 		}
 
-		return Valor;
+		return valor;
 	}
 
 	public static int verificaMenor(int Array[]) {
 
-		int Valor = Array[0];
+		int valor = Array[0];
 
 		for (int i = 1; i < Array.length; i++) {
-			if (Array[i] < Valor) {
-				Valor = Array[i];
+			if (Array[i] < valor) {
+				valor = Array[i];
 			}
 		}
 
-		return Valor;
+		return valor;
 	}
 }
